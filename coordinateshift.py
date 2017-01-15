@@ -3,14 +3,17 @@ from __future__ import print_function
 import math as ma
 import sys
 
-L1 = ma.sqrt(2)
-L2 = ma.sqrt(2) / 2.0
+L1 = 1
+L2 = 1
 
 #in rectangular as x,y and polar as theta phi
 class Coordinate:
     def __init__(self, c_1, c_2):
         self.c_1 = c_1
         self.c_2 = c_2
+
+    def __str__(self):
+        return str(self.c_1) + ', ' + str(self.c_2)
 
 #Changes Coordinates from rectangular to dual polar
 def coordinate_change(coro):
@@ -26,7 +29,7 @@ def convert_corarray(corarray, filename):
 		print(coordinate_change(coro), '\n', file= filename)
 
 def main(args):
-    print(coordinate_change(Coordinate(int(args[0])), int(args[1])))
+    print(coordinate_change(Coordinate(float(args[0]), float(args[1]))))
 
 if __name__ == '__main__':
     main(sys.argv[1:])
