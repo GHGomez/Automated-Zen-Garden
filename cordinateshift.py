@@ -1,3 +1,4 @@
+from __future__ import print_function
 import math as ma
 
 L1 = 1
@@ -23,3 +24,13 @@ newcor = cordinate_change(testcor)
 
 print(newcor.c_1)
 print(newcor.c_2)
+
+def convert_corarray(corarray, filename):
+	file = open(filename, 'w+')
+	for coro in corarray:
+		print(cordinate_change(coro), '\n', file= filename)
+
+square_array = [Coordinate(0.5, 0.5), Coordinate(0.5, 0.5), 
+Coordinate(0.5, 0.5), Coordinate(0.5, 0.5)]
+		
+
