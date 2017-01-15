@@ -11,5 +11,11 @@ trianglearray = [coor.Coordinate(0.20, 0.20), coor.Coordinate(0.80, 0.20)
 
 coor.convert_corarray(trianglearray, 'trianglearray.csv')
 
+stararray = [coor.Coordinate(0.30, 0.10), coor.Coordinate(0.50, 0.90),
+coor.Coordinate(0.70, 0.10), coor.Coordinate(0.10, 0.60), 
+coor.Coordinate(0.90, 0.60), coor.Coordinate(0.30, 0.10)]
+
+coor.convert_corarray(stararray, 'stararray.csv')
+
 
 
