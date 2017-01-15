@@ -9,5 +9,6 @@ ser = serial.Serial('/dev/cu.usbmodemFA131', 9600)
 
 for array in arrarray:
 	for coordinate in array:
-		ser.write(str(coordinate.c_1) + ' ')
-		ser.write(str(coordinate.c_2) + '\n')
+		changed_coor = coordinate_chage(coordinate)
+		ser.write(str(changed_coor.c_1) + ' ')
+		ser.write(str(changed_coor.c_2) + '\n')
