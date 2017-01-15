@@ -13,7 +13,7 @@ class Coordinate:
 testcor = Coordinate(ma.sqrt(0.5), ma.sqrt(0.5))
 
 #Changes Coordinates from rectangular to dual polar
-def cordinate_change(coro):
+def coordinte_change(coro):
     L3 = ma.sqrt((coro.c_1 ** 2) + (coro.c_2 ** 2))
     rho = ma.atan((coro.c_1 ** 2) + (coro.c_2 ** 2))
     theta = rho + ma.acos(((L2 ** 2) + (L1 ** 2) - (L3 ** 2))/(-2 * L1 * L3))
