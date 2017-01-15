@@ -35,7 +35,7 @@ void setup() {
   head = (move_queue_node_t *)malloc(sizeof(move_queue_node_t));
   head->a1 = s1.read();
   head->a2 = s2.read();
-  head->next = NULL; 
+  head->next = NULL;
 
   move_queue_node_t *curr;
   move_queue_node_t *prev = head;
@@ -52,21 +52,25 @@ void setup() {
     prev->next = curr;
     prev = curr;
   }
+
+  curr = head;
+  while (curr->next != NULL) {
+    curr = curr->next;
+  }
   tail = curr;
 }
 
 void loop() {
   if (Serial.available() > 0) {
-    tail->next = (move_queue_node_t *)malloc(sizeof(move_queue_node_t));
-    tail = tail->next;
-
-    tail->a1 = Serial.parseInt();
-    tail->a2 = Serial.parseInt();
-    tail->next = NULL;
-
-    Serial.print(tail->a1);
-    Serial.print(", ");
-    Serial.println(tail->a2);
+    int a1_temp = Serial.parseInt();
+    int a2_temp = Serial.parseInt();
+    if (a1_temp > 5 && a2_temp > 5) {
+      tail->next = (move_queue_node_t *)malloc(sizeof(move_queue_node_t));
+      tail->next->a1 = a1_temp;
+      tail->next->a2 = a2_temp;
+      tail->next->next = NULL;
+      tail = tail->next;
+    }
   }
   if (head->next != NULL) {
     float a1_step = (head->next->a1 - head->a1) / MAX_STEPS;
