@@ -22,7 +22,7 @@ def coordinate_change(coro):
     theta = rho + ma.acos(((L2 ** 2) - (L1 ** 2) - (L3 ** 2))
         /(-2 * L1 * L3))
     phi = ma.acos(((L3 ** 2) - (L2 ** 2) - (L1 ** 2))/(-2 * L1 * L2))
-    return Coordinate(theta * 180 / ma.pi, phi * 180 / ma.pi)
+    return Coordinate(int(theta * 180 / ma.pi), int(phi * 180 / ma.pi))
 
 def convert_corarray(corarray, filename):
 	filen = open(filename, 'w+')
