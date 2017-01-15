@@ -24,9 +24,9 @@ def coordinate_change(coro):
     return Coordinate(theta * 180 / ma.pi, phi * 180 / ma.pi)
 
 def convert_corarray(corarray, filename):
-	file = open(filename, 'w+')
+	filen = open(filename, 'w+')
 	for coro in corarray:
-		print(coordinate_change(coro), '\n', file= filename)
+		print(coordinate_change(coro), '\n', file= filen)
 
 def main(args):
     print(coordinate_change(Coordinate(float(args[0]), float(args[1]))))
