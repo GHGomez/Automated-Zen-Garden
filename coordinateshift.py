@@ -26,7 +26,7 @@ def coordinate_change(coro):
 def convert_corarray(corarray, filename):
 	filen = open(filename, 'w+')
 	for coro in corarray:
-		print(coordinate_change(coro), '\n', file= filen)
+		print(coordinate_change(coro), file= filen)
 
 def main(args):
     print(coordinate_change(Coordinate(float(args[0]), float(args[1]))))
