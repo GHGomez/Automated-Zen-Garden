@@ -29,4 +29,4 @@ def main(args):
     print(coordinate_change(Coordinate(int(args[0])), int(args[1])))
 
 if __name__ == '__main__':
-    main(sys.args[1:])
+    main(sys.argv[1:])
