@@ -3,8 +3,8 @@ from __future__ import print_function
 import math as ma
 import sys
 
-L1 = 1
-L2 = 1
+L1 = 9.5 / 13.5
+L2 = 8.5 / 13.5
 
 #in rectangular as x,y and polar as theta phi
 class Coordinate:
