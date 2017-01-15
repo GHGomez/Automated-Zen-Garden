@@ -1,4 +1,4 @@
-# Notice me Zen.pi
+# Notice me Zen.py
 
 Python code for automating a zen garden. Includes code for taking in cordinates and instructing the sirvo motors how to move.
 
